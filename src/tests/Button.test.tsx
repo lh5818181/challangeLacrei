@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import { ThemeProvider } from 'styled-components'
-import Button from '@components/Button'
+import Button from '@components/button/Button'
 import theme from '@styles/theme'
 
 test('renders button and handles click', () => {

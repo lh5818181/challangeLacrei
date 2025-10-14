@@ -1,41 +1,8 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import styled from 'styled-components'
+import { Checkmark, ConfirmationContainer, Container, List, ListItem } from './ConfirmationPageStyles'
 
-const Container = styled.div`
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: ${({ theme }) => theme.colors.lightGray};
-`
-
-const ConfirmationContainer = styled.main`
-  padding: 2rem;
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: ${({ theme }) => theme.colors.white};
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-`
-
-const List = styled.ul`
-  list-style: none;
-  padding: 0;
-`
-
-const ListItem = styled.li`
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-`
-
-const Checkmark = styled.span`
-  color: green;
-  font-weight: bold;
-  margin-right: 0.5rem;
-`
 
 export default function ConfirmationPage() {
   const router = useRouter()

@@ -1,14 +1,6 @@
-import React from 'react'
 import styled from 'styled-components'
 
-interface ButtonProps {
-  children: React.ReactNode
-  onClick?: () => void
-  type?: 'button' | 'submit' | 'reset'
-  ariaLabel?: string
-}
-
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   color: ${({ theme }) => theme.colors.lacreiGreen};
   margin-left: 1.5rem;
   text-decoration: none;
@@ -27,11 +19,3 @@ const StyledButton = styled.button`
     outline: none;
   }
 `
-
-export default function Button({ children, onClick, type = 'button', ariaLabel }: ButtonProps) {
-  return (
-    <StyledButton onClick={onClick} type={type} aria-label={ariaLabel}>
-      {children}
-    </StyledButton>
-  )
-}

@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import { ThemeProvider } from 'styled-components'
-import Header from '@components/Header'
+import Header from '@components/header/Header'
 import theme from '@styles/theme'
 
 describe('Header component', () => {

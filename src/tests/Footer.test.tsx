@@ -2,7 +2,7 @@ import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import { ThemeProvider } from 'styled-components'
-import Footer from '@components/Footer'
+import Footer from '@components/footer/Footer'
 import theme from '@styles/theme'
 
 describe('Footer component', () => {
