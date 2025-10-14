@@ -1,12 +1,17 @@
 import styled from 'styled-components'
 
 export const Form = styled.form`
-  max-width: 600px;
+  max-width: 100%;
   margin: 2rem auto;
   padding: 1rem;
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+  @media(min-width: 768px) {
+    max-width: 600px;
+    padding: 1rem;
+  }
 `
 
 export const Label = styled.label`
@@ -40,9 +45,14 @@ export const Button = styled.button`
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s ease;
+  width: 100%;
 
   &:hover, &:focus {
     background-color: ${({ theme }) => theme.colors.lightGreen};
     outline: none;
+  }
+
+  @media(min-width: 768px) {
+    width: auto;
   }
 `

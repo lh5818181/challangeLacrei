@@ -4,23 +4,31 @@ export const HeaderContainer = styled.header`
   background-color: ${({ theme }) => theme.colors.lacreiGreen};
   color: ${({ theme }) => theme.colors.white};
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 24px 162px 24px 162px;
-  
+  padding: 24px 1rem;
 
+  @media(min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 24px 162px;
+  }
 `
 
 export const Logo = styled.div`
   font-weight: bold;
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 
+  @media(min-width: 768px) {
+    margin-bottom: 0;
+  }
 `
 
 export const Nav = styled.nav`
   a {
     color: ${({ theme }) => theme.colors.lacreiGreen};
-    margin-left: 1.5rem;
+    margin: 0 0.75rem;
     text-decoration: none;
     padding: 10px 20px;
     font-weight: 700;
@@ -37,5 +45,13 @@ export const Nav = styled.nav`
       color: ${({ theme }) => theme.colors.white};
       outline: none;
     }
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media(min-width: 768px) {
+    justify-content: flex-start;
   }
 `
