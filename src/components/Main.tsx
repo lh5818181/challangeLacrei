@@ -1,6 +1,6 @@
+import React from 'react'
 import styled from "styled-components";
 import Button from "./Button";
-import { NextPage } from "next";
 import { useRouter } from "next/router";
 
 const MainContainer = styled.div`
