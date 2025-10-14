@@ -5,6 +5,7 @@ module.exports = {
     '^.+\\.(ts|tsx)$': 'babel-jest',
   },
   moduleNameMapper: {
+    '^@styles/(.*)$': '<rootDir>/src/styles/$1',
     '^@components/(.*)$': '<rootDir>/src/components/$1',
   },
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
