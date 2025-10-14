@@ -1,5 +1,18 @@
-import React from 'react'
+
+import Header from '@components/Header'
+import Footer from '@components/Footer'
+import ConfirmationPage from '@components/ConfirmationPage'
+
+
+
 
 export default function Confirmation() {
-  return <div>Confirmação de cadastro</div>
+  
+  return (
+    <>
+      <Header />
+      <ConfirmationPage />
+      <Footer />
+    </>
+  )
 }

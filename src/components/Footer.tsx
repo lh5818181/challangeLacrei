@@ -1,4 +1,6 @@
+import Link from 'next/link'
 import styled from 'styled-components'
+import { Nav } from './Header'
 
 const FooterContainer = styled.footer`
   background-color: ${({ theme }) => theme.colors.lacreiGreen};
@@ -24,13 +26,11 @@ export default function Footer() {
   return (
     <FooterContainer>
       <div>
-        <nav>
-          <ul>
-            <li><LinkItem href="#">Início</LinkItem></li>
-            <li><LinkItem href="#">Sobre</LinkItem></li>
-            <li><LinkItem href="#">Contato</LinkItem></li>
-          </ul>
-        </nav>
+      <Nav aria-label="Navegação segundaária">
+        <Link href="/">Início</Link>
+        <Link href="/diversity">Diversidade</Link>
+        <Link href="/confirmation">Confirmação</Link>
+      </Nav>
       </div>
       <div>
       <p>© 2025 Lacrei Saúde. Todos os direitos reservados.</p>

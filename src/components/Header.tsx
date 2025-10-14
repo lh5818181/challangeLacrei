@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styled from 'styled-components'
 
 const HeaderContainer = styled.header`
@@ -17,7 +18,7 @@ const Logo = styled.div`
 
 `
 
-const Nav = styled.nav`
+export const Nav = styled.nav`
   a {
     color: ${({ theme }) => theme.colors.lacreiGreen};
     margin-left: 1.5rem;
@@ -45,9 +46,9 @@ export default function Header() {
     <HeaderContainer>
       <Logo>Lacrei Saúde</Logo>
       <Nav aria-label="Navegação principal">
-        <a href="#">Início</a>
-        <a href="#">Sobre</a>
-        <a href="#">Contato</a>
+        <Link href="/">Início</Link>
+        <Link href="/diversity">Diversidade</Link>
+        <Link href="/confirmation">Confirmação</Link>
       </Nav>
     </HeaderContainer>
   )
