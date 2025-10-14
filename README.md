@@ -79,7 +79,7 @@ Deploy:
 
 O deploy foi realizado na plataforma Vercel, que oferece integração contínua e preview deploys automáticos.
 
-**Link do deploy:** [INSIRA AQUI O LINK DO DEPLOY]
+**Link do deploy:** https://challange-lacrei.vercel.app/
 
 ---
 
@@ -88,16 +88,13 @@ O deploy foi realizado na plataforma Vercel, que oferece integração contínua 
 **Rollback simples:**  
 Na Vercel, é possível restaurar uma versão anterior da aplicação diretamente pelo painel de deploys, selecionando o deploy desejado e clicando em "Rollback".
 
-**Rollback funcional:**  
-Utilizamos Preview Deploys para validar cada alteração antes de promover para produção, garantindo que versões estáveis estejam sempre disponíveis.
-
 ---
 
 ## Justificativas Técnicas e Visuais
 
 - **Acessibilidade:** Uso de HTML semântico, atributos ARIA, contraste de cores validado com Lighthouse (nota mínima 90), e testes com leitores de tela.
 - **Responsividade:** Abordagem mobile-first com adaptação fluida para diferentes tamanhos de tela.
-- **Performance:** Lazy loading de imagens e otimização do bundle para garantir nota mínima 80 no Lighthouse.
+- **Performance:** Lazy loading e otimização do bundle para garantir nota mínima 80 no Lighthouse.
 - **Estilização:** Styled-Components com tema centralizado para manter consistência visual conforme o Marsha Design System.
 - **Testes:** Cobertura de componentes essenciais para garantir estabilidade e qualidade.
 
