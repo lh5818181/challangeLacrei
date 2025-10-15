@@ -71,6 +71,7 @@ export const Nav = styled.nav`
   @media (min-width: 768px) {
     justify-content: flex-start;
     width: auto;
+
     a {
       margin: 0 0.75rem;
       font-size: 1.1rem;
