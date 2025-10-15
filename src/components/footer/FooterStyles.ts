@@ -4,9 +4,11 @@ export const FooterContainer = styled.footer`
   background-color: ${({ theme }) => theme.colors.lacreiGreen};
   color: ${({ theme }) => theme.colors.white};
   display: flex;
+  padding: 24px 162px;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 24px 1rem;
+  gap: 2rem;
 
   ul {
     list-style: none;
@@ -17,17 +19,17 @@ export const FooterContainer = styled.footer`
     margin: 1rem 0 0 0;
   }
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: 24px 162px;
 
-    navFooter {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    ul {
+      justify-content: flex-start;
+      margin: 0;
     }
-    
   }
 `
 
@@ -39,9 +41,13 @@ export const LinkItem = styled.a`
 `
 
 export const NavFooter = styled.nav`
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 1rem;
+
   a {
     color: ${({ theme }) => theme.colors.lacreiGreen};
-    margin: 0 0.75rem;
     text-decoration: none;
     padding: 10px 20px;
     font-weight: 700;
@@ -58,15 +64,12 @@ export const NavFooter = styled.nav`
       color: ${({ theme }) => theme.colors.white};
       outline: none;
     }
-
-
-    @media(min-width: 768px) {
-    
-    navFooter {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    }
-    
   }
-  }`
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0;
+  }
+`

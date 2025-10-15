@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <FooterContainer>
       <div>
-      <NavFooter aria-label="Navegação segundaária">
+      <NavFooter aria-label="Navegação segundaária" >
         <Link href="/">Início</Link>
         <Link href="/diversity">Diversidade</Link>
         <Link href="/confirmation">Confirmação</Link>
