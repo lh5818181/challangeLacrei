@@ -4,11 +4,12 @@ export const FooterContainer = styled.footer`
   background-color: ${({ theme }) => theme.colors.lacreiGreen};
   color: ${({ theme }) => theme.colors.white};
   display: flex;
-  padding: 24px 162px;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 24px 1rem;
   gap: 2rem;
+  width: 100%;
 
   ul {
     list-style: none;
@@ -17,10 +18,10 @@ export const FooterContainer = styled.footer`
     justify-content: center;
     padding: 0;
     margin: 1rem 0 0 0;
+    width: 100%;
   }
 
   @media (min-width: 768px) {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -29,6 +30,7 @@ export const FooterContainer = styled.footer`
     ul {
       justify-content: flex-start;
       margin: 0;
+      width: auto;
     }
   }
 `
@@ -42,9 +44,11 @@ export const LinkItem = styled.a`
 
 export const NavFooter = styled.nav`
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
+  width: 100%;
 
   a {
     color: ${({ theme }) => theme.colors.lacreiGreen};
@@ -67,9 +71,9 @@ export const NavFooter = styled.nav`
   }
 
   @media (min-width: 768px) {
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     margin-top: 0;
+    width: auto;
   }
 `
