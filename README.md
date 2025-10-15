@@ -104,6 +104,61 @@ Na Vercel, é possível restaurar uma versão anterior da aplicação diretament
 
 ---
 
+## Documentação Rápida
+
+Nesta seção, você encontra as decisões técnicas principais, prints do Lighthouse e um mini-checklist de acessibilidade (A11y) para garantir qualidade e performance no projeto.
+
+---
+
+### Decisões Técnicas
+
+- Uso de Next.js com TypeScript para robustez e escalabilidade.
+- Styled-Components para estilização com tema centralizado e SSR configurado.
+- Importação dinâmica (`next/dynamic`) para otimização do carregamento de componentes pesados.
+- Configuração do Webpack Bundle Analyzer para análise e otimização do bundle JavaScript.
+- Testes unitários com Jest e React Testing Library para componentes essenciais.
+
+---
+
+### Prints do Lighthouse
+
+- First Contentful Paint (FCP): 1,0 s
+- Largest Contentful Paint (LCP): 9,5 s (ponto a melhorar)
+- Total Blocking Time (TBT): 1.050 ms (otimizar para reduzir bloqueios)
+- Cumulative Layout Shift (CLS): 0 (excelente)
+- Speed Index: 1,4 s
+
+---
+
+### Mini-Checklist de Acessibilidade (A11y)
+
+- Uso de HTML semântico e atributos ARIA onde necessário.
+- Contraste de cores validado para acessibilidade (nota mínima 90 no Lighthouse).
+- Navegação por teclado testada e funcional.
+- Componentes com foco visível e estados acessíveis.
+- Testes com leitores de tela para garantir leitura correta.
+- Formulários com labels associados corretamente.
+
+---
+
+### Itens Implementados
+
+- Importação dinâmica (`next/dynamic`) aplicada em componentes grandes, como DiversityForm.
+- Testes unitários para Header, Footer e Button/Form.
+- Configuração do Webpack Bundle Analyzer para análise do bundle JavaScript.
+
+---
+
+### Itens Não Implementados
+
+- Uso do `next/font` para fontes otimizadas e carregamento eficiente.
+- Revisão do CSS global e styled-components para remoção de estilos não usados.
+- Revisão das configurações de cache e compressão no deploy.
+- Análise e otimização das tarefas que bloqueiam a thread principal.
+- Uso do `next/image` com dimensões fixas e `priority` (não aplicável, pois não há imagens no projeto).
+
+---
+
 ## Considerações Finais
 
 Este projeto representa um compromisso com a inclusão, acessibilidade e impacto social, alinhado à missão da Lacrei Saúde. Agradeço a oportunidade de contribuir e aprender com essa experiência.
