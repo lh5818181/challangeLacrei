@@ -2,7 +2,7 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import Header from '@components/header/Header'
 import Footer from '@components/footer/Footer'
-import DiversityForm from '@components/diversityForm/DiversityForm'
+import DiversityForm from '@components/diversityForm/DiversityFormComponent'
 
 export default function Diversity() {
   const router = useRouter()
