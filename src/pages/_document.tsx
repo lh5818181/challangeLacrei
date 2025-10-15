@@ -1,8 +1,23 @@
 import React from 'react'
-import Document, { DocumentContext } from 'next/document'
+import Document, { DocumentContext, Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
+  render() {
+    return (
+      <Html lang="pt-BR">
+        <Head>
+          <title>Lacrei Saúde - Voluntariado Front-end</title>
+          <meta name="description" content="Projeto voluntário Front-end focado em acessibilidade e inclusão." />
+          {/* Outros metadados importantes podem ser adicionados aqui */}
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage

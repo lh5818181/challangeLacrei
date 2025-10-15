@@ -74,7 +74,21 @@ Na Vercel, é possível restaurar uma versão anterior da aplicação diretament
 
 ## Justificativas Técnicas e Visuais
 
-- **Acessibilidade:** Uso de HTML semântico, atributos ARIA, contraste de cores validado com Lighthouse (nota mínima 90), e testes com leitores de tela.
+### Acessibilidade
+
+- Navegação por teclado funcionando  
+- Foco visível em elementos interativos  
+- Uso correto de landmarks (header, nav, main, footer)  
+- Uso de HTML semântico, atributos ARIA, contraste de cores validado com Lighthouse (nota 100)  
+- Inclusão do elemento `<title>` para melhorar a semântica e acessibilidade  
+- Inclusão do atributo `lang="pt-BR"` no elemento `<html>` para definir o idioma da página  
+- Revisão e correção de roles ARIA e labels para controles interativos  
+- Garantia de ordem lógica de tabulação e ausência de armadilhas de foco  
+- Textos alternativos adequados em imagens  
+
+#### Print do Lighthouse - Acessibilidade (Nota 100)
+![Print do Lighthouse Acessibilidade](../challangeLacrei/src/images/Print%20-%20Acessibilidade.png)  
+*Relatório Lighthouse mostrando nota 100 em acessibilidade.*
 - **Responsividade:** Abordagem mobile-first com adaptação fluida para diferentes tamanhos de tela.
 - **Performance:** Lazy loading e otimização do bundle para garantir nota mínima 80 no Lighthouse.
 - **Estilização:** Styled-Components com tema centralizado para manter consistência visual conforme o Marsha Design System.
