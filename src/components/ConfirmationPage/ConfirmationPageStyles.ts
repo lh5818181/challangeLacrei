@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.lightGray};
-  padding: 1rem; /* mobile: padding para evitar bordas coladas */
+  padding: 1rem;
 
   @media(min-width: 768px) {
     padding: 0;
@@ -25,4 +25,31 @@ export const ConfirmationContainer = styled.main`
     max-width: 600px;
     padding: 2rem;
   }
+`
+
+export const List = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0 0;
+`
+
+export const ListItem = styled.li`
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: ${({ theme }) => theme.colors.text};
+`
+
+export const Checkmark = styled.span`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0.75em;
+  border-radius: 50%;
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: #fff;
+  font-size: 1em;
 `
