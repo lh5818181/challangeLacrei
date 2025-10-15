@@ -87,12 +87,36 @@ Na Vercel, é possível restaurar uma versão anterior da aplicação diretament
 - Textos alternativos adequados em imagens  
 
 #### Print do Lighthouse - Acessibilidade (Nota 100)
-![Print do Lighthouse Acessibilidade](../challangeLacrei/src/images/Print%20-%20Acessibilidade.png)  
+![Print do Lighthouse Acessibilidade](https://raw.githubusercontent.com/lh5818181/servidor_estatico/refs/heads/main/Print%20-%20Acessibilidade.png)  
 *Relatório Lighthouse mostrando nota 100 em acessibilidade.*
-- **Responsividade:** Abordagem mobile-first com adaptação fluida para diferentes tamanhos de tela.
-- **Performance:** Lazy loading e otimização do bundle para garantir nota mínima 80 no Lighthouse.
-- **Estilização:** Styled-Components com tema centralizado para manter consistência visual conforme o Marsha Design System.
-- **Testes:** Cobertura de componentes essenciais para garantir estabilidade e qualidade.
+
+---
+
+### Performance
+
+- Lazy loading implementado para imagens usando `next/image`  
+- Otimização do bundle com code splitting  
+- Redução e remoção de CSS não utilizado com PurgeCSS  
+- Nota de performance no Lighthouse (Mobile) ≥ 80  
+
+#### Print do Lighthouse - Performance
+
+![Print do Lighthouse Performance](caminho/para/imagem-performance.png)  
+*Relatório Lighthouse mostrando nota ≥ 80 em performance.*
+
+---
+
+### Testes
+
+- Testes unitários para os componentes `Header`, `Footer`, `Button` e `DiversityForm`  
+- Paths dos testes disponíveis em `src/tests/`  
+
+#### Print do Summary do Jest
+
+![Print do Summary do Jest](caminho/para/imagem-jest.png)  
+*Resumo dos testes unitários executados com Jest.*
+
+---
 
 ## Considerações Finais
 
