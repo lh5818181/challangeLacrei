@@ -92,28 +92,14 @@ Na Vercel, é possível restaurar uma versão anterior da aplicação diretament
 
 ---
 
-### Performance
-
-- Lazy loading implementado para imagens usando `next/image`  
-- Otimização do bundle com code splitting  
-- Redução e remoção de CSS não utilizado com PurgeCSS  
-- Nota de performance no Lighthouse (Mobile) ≥ 80  
-
-#### Print do Lighthouse - Performance
-
-![Print do Lighthouse Performance](caminho/para/imagem-performance.png)  
-*Relatório Lighthouse mostrando nota ≥ 80 em performance.*
-
----
-
 ### Testes
 
-- Testes unitários para os componentes `Header`, `Footer`, `Button` e `DiversityForm`  
+- Testes unitários para os componentes `Header`, `Footer`, `Button`  
 - Paths dos testes disponíveis em `src/tests/`  
 
 #### Print do Summary do Jest
 
-![Print do Summary do Jest](caminho/para/imagem-jest.png)  
+![Print do Summary do Jest](https://raw.githubusercontent.com/lh5818181/servidor_estatico/refs/heads/main/print%20-%20testes.png)  
 *Resumo dos testes unitários executados com Jest.*
 
 ---
