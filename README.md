@@ -72,95 +72,89 @@ Rollback simples:
 
 Na Vercel, é possível restaurar uma versão anterior da aplicação diretamente pelo painel de deploys, selecionando o deploy desejado e clicando em "Rollback".
 
-## Justificativas Técnicas e Visuais
+# Documentação Técnica do Projeto
 
-### Acessibilidade
+## Documentação Rápida
+
+Nesta seção estão as decisões técnicas principais, métricas do Lighthouse, checklist de acessibilidade e resumo do que foi implementado ou pendente.
+
+---
+
+## Decisões Técnicas
+
+- **Framework:** Next.js com TypeScript para robustez e escalabilidade  
+- **Estilização:** Styled-Components com tema centralizado e SSR configurado  
+- **Otimização de carregamento:** importação dinâmica via `next/dynamic`  
+- **Análise de bundle:** Webpack Bundle Analyzer configurado  
+- **Testes:** Jest + React Testing Library para componentes essenciais
+
+---
+
+## Prints e Métricas do Lighthouse
+
+- **FCP (First Contentful Paint):** 1,1 s  
+- **LCP (Largest Contentful Paint):** 10,6 s — ponto a melhorar  
+- **TBT (Total Blocking Time):** 2.460 ms — otimizar para reduzir bloqueios  
+- **CLS (Cumulative Layout Shift):** 0 — excelente  
+- **Speed Index:** 2,0 s
+
+![Print do Lighthouse](https://raw.githubusercontent.com/lh5818181/servidor_estatico/refs/heads/main/print%20-%20lighthouse.png)  
+*Resumo das métricas do Lighthouse.*
+
+---
+
+## Acessibilidade
+
+### Checklist de Acessibilidade
 
 - Navegação por teclado funcionando  
 - Foco visível em elementos interativos  
-- Uso correto de landmarks (header, nav, main, footer)  
-- Uso de HTML semântico, atributos ARIA, contraste de cores validado com Lighthouse (nota 100)  
-- Inclusão do elemento `<title>` para melhorar a semântica e acessibilidade  
-- Inclusão do atributo `lang="pt-BR"` no elemento `<html>` para definir o idioma da página  
-- Revisão e correção de roles ARIA e labels para controles interativos  
-- Garantia de ordem lógica de tabulação e ausência de armadilhas de foco  
+- Uso correto de landmarks (`header`, `nav`, `main`, `footer`)  
+- HTML semântico e atributos ARIA aplicados corretamente  
+- Contraste de cores validado com Lighthouse — **nota 100**  
+- Inclusão do elemento `<title>`  
+- Inclusão do atributo `lang="pt-BR"` no elemento `<html>`  
+- Ordem lógica de tabulação e ausência de armadilhas de foco  
 - Textos alternativos adequados em imagens  
+- Labels e roles ARIA revisados em controles interativos  
+- Testes com leitores de tela realizados
 
-#### Print do Lighthouse - Acessibilidade (Nota 100)
+### Print do Lighthouse — Acessibilidade (Nota 100)
+
 ![Print do Lighthouse Acessibilidade](https://raw.githubusercontent.com/lh5818181/servidor_estatico/refs/heads/main/Print%20-%20Acessibilidade.png)  
 *Relatório Lighthouse mostrando nota 100 em acessibilidade.*
 
 ---
 
-### Testes
+## Testes
 
 - Testes unitários para os componentes `Header`, `Footer`, `Button`  
-- Paths dos testes disponíveis em `src/tests/`  
+- Caminho dos testes: `src/tests/`  
+- Frameworks utilizados: Jest + React Testing Library
 
-#### Print do Summary do Jest
+### Print do Summary do Jest
 
 ![Print do Summary do Jest](https://raw.githubusercontent.com/lh5818181/servidor_estatico/refs/heads/main/print%20-%20testes.png)  
 *Resumo dos testes unitários executados com Jest.*
 
 ---
 
-## Documentação Rápida
+## Itens Implementados
 
-Nesta seção, você encontra as decisões técnicas principais, prints do Lighthouse e um mini-checklist de acessibilidade (A11y) para garantir qualidade e performance no projeto.
-
----
-
-### Decisões Técnicas
-
-- Uso de Next.js com TypeScript para robustez e escalabilidade.
-- Styled-Components para estilização com tema centralizado e SSR configurado.
-- Importação dinâmica (`next/dynamic`) para otimização do carregamento de componentes pesados.
-- Configuração do Webpack Bundle Analyzer para análise e otimização do bundle JavaScript.
-- Testes unitários com Jest e React Testing Library para componentes essenciais.
+- Importação dinâmica (`next/dynamic`) aplicada em componentes grandes, como `DiversityForm`  
+- Testes unitários para `Header`, `Footer` e `Button/Form`  
+- Configuração do Webpack Bundle Analyzer para análise do bundle JavaScript
 
 ---
 
-### Prints do Lighthouse
+## Itens Não Implementados / Pendências
 
-- First Contentful Paint (FCP): 1,1 s
-- Largest Contentful Paint (LCP): 10,6 s (ponto a melhorar)
-- Total Blocking Time (TBT): 2.460 ms (otimizar para reduzir bloqueios)
-- Cumulative Layout Shift (CLS): 0 (excelente)
-- Speed Index: 2,0 s
+- Uso do `next/font` para fontes otimizadas  
+- Revisão do CSS global e styled-components para remoção de estilos não usados  
+- Revisão das configurações de cache e compressão no deploy  
+- Análise e otimização das tarefas que bloqueiam a thread principal  
+- Uso do `next/image` com dimensões fixas e `priority` (não aplicável, pois não há imagens no projeto)
 
-![Print do lighthouse](https://raw.githubusercontent.com/lh5818181/servidor_estatico/refs/heads/main/print%20-%20lighthouse.png)  
-*Resumo das métricas do lighthouse.*
-
----
-
-### Mini-Checklist de Acessibilidade (A11y)
-
-- Uso de HTML semântico e atributos ARIA onde necessário.
-- Contraste de cores validado para acessibilidade (nota mínima 90 no Lighthouse).
-- Navegação por teclado testada e funcional.
-- Componentes com foco visível e estados acessíveis.
-- Testes com leitores de tela para garantir leitura correta.
-- Formulários com labels associados corretamente.
-
----
-
-### Itens Implementados
-
-- Importação dinâmica (`next/dynamic`) aplicada em componentes grandes, como DiversityForm.
-- Testes unitários para Header, Footer e Button/Form.
-- Configuração do Webpack Bundle Analyzer para análise do bundle JavaScript.
-
----
-
-### Itens Não Implementados
-
-- Uso do `next/font` para fontes otimizadas e carregamento eficiente.
-- Revisão do CSS global e styled-components para remoção de estilos não usados.
-- Revisão das configurações de cache e compressão no deploy.
-- Análise e otimização das tarefas que bloqueiam a thread principal.
-- Uso do `next/image` com dimensões fixas e `priority` (não aplicável, pois não há imagens no projeto).
-
----
 
 ## Considerações Finais
 
