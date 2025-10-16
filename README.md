@@ -142,7 +142,7 @@ Nesta seção estão as decisões técnicas principais, métricas do Lighthouse,
 ## Itens Implementados
 
 - Importação dinâmica (`next/dynamic`) aplicada em componentes grandes, como `DiversityForm`  
-- Testes unitários para `Header`, `Footer` e `Button/Form`  
+- Testes unitários para `Header`, `Footer` e `Button`  
 - Configuração do Webpack Bundle Analyzer para análise do bundle JavaScript
 
 ---
