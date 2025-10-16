@@ -128,6 +128,9 @@ Nesta seção, você encontra as decisões técnicas principais, prints do Light
 - Cumulative Layout Shift (CLS): 0 (excelente)
 - Speed Index: 1,4 s
 
+![Print do lighthouse](https://raw.githubusercontent.com/lh5818181/servidor_estatico/refs/heads/main/print%20-%20lighthouse.png)  
+*Resumo das métricas do lighthouse.*
+
 ---
 
 ### Mini-Checklist de Acessibilidade (A11y)
