@@ -122,11 +122,11 @@ Nesta seção, você encontra as decisões técnicas principais, prints do Light
 
 ### Prints do Lighthouse
 
-- First Contentful Paint (FCP): 1,0 s
-- Largest Contentful Paint (LCP): 9,5 s (ponto a melhorar)
-- Total Blocking Time (TBT): 1.050 ms (otimizar para reduzir bloqueios)
+- First Contentful Paint (FCP): 1,1 s
+- Largest Contentful Paint (LCP): 10,6 s (ponto a melhorar)
+- Total Blocking Time (TBT): 2.460 ms (otimizar para reduzir bloqueios)
 - Cumulative Layout Shift (CLS): 0 (excelente)
-- Speed Index: 1,4 s
+- Speed Index: 2,0 s
 
 ![Print do lighthouse](https://raw.githubusercontent.com/lh5818181/servidor_estatico/refs/heads/main/print%20-%20lighthouse.png)  
 *Resumo das métricas do lighthouse.*
